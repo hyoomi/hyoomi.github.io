@@ -1,0 +1,203 @@
+
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    /* 화면에 보이지 않음. screen reader에는 보임 */
+}
+html {
+    /*box-sizing: border-box;*/
+    margin: 0;
+    padding: 0; /*상 우 하 좌 / 상하 좌우 / 위 우좌 아래*/
+    /*font-family: Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;*/
+    /*앞에꺼가 없으면 뒤에 폰트를 사용*/
+}
+#page{
+    position: relative;
+    margin: 0 auto;
+    width: 1080px;
+}
+
+
+/* header=======================================================================================*/
+#header-logo > span:first-child {               /* 따시곰 그림 */
+    width: 135px;
+    height: 150px;
+    display: inline-block;
+    background-image: url(./icon_wcb.jpg);
+    background-position: 10px 0px;
+    background-repeat: no-repeat;
+    background-size: 90%;
+
+}
+/*h1 > span:nth-child(2) :: h1의 두번째 자식*/
+/*h1 > span:nth-of-type(2):: h1의 두번째 span */
+header h1 > span:nth-child(2){                  /* warm country bear 그림 */
+    margin-left: 10px;
+    width: 600px;
+    height: 75px;
+    display: inline-block;
+    background-image: url(./logo_wcb.jpg);
+    background-position: -5px -75px;
+    background-repeat: no-repeat;
+    background-size: 105%;
+
+    position: absolute;
+    top: 70px;
+}
+
+
+/* 메뉴 =========================================================================================*/
+#nav-divider{                                   /* 메뉴 */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: pink;
+    height: 80px;
+}
+#nav-divider > h2 {
+    padding: 5px;
+    margin: 0 10px 0 10px;
+    width: 50px;
+    height: 50%;
+    /*display: inline-block;*/
+    float: left;
+    background: white;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    text-align: center;
+}
+#nav-divider > h2 > span{
+    display: inline-block; /*둘 중 하나 사용*/
+    /*float: left;*/
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#nav-divider > h3{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*display: inline-block;*/
+    float: left;
+}
+#nav-divider > h3 > span {
+    margin-right: 10px;
+}
+#nav-divider > h4{
+    margin: 0;
+    padding: 0;
+    float: right;
+/*position:relative 신중하게 쓰자.. 컨테이닝 블록 고려*/
+    position: relative;     /*nav-hover의 컨테이닝 블록*/
+    top: 50%;
+    transform: translateY(-50%);
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+}
+#nav-divider > h4:hover #nav-hover{
+    display: inline-block;
+}
+#nav-hover{
+    display: none;
+
+    position: absolute;
+    top: -110px;
+    right: 0;
+
+    width:100px;
+    height: 100px;
+
+    float: left;
+
+    /*padding: 10px;*/
+    padding: 0;
+    margin: 0;
+    border: 7px solid pink;
+    background: #fffcab;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#nav-hover ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    text-align: center; /*가로 중앙 정렬*/
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 내용 =========================================================================================*/
+#content-divider{                               /* 내용 */
+    background: #fffcab;
+    vertical-align: top;
+
+    border-bottom-right-radius: 30px;
+}
+#aside-divider{                                 /* 목차 */
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 50px;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    /*background: #ffe0e5;*/
+    background: #fff0f1;
+    width: 100px;
+
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+#section-divider{                               /* 글 */
+    margin: 20px;
+    padding: 30px;
+    /*background: #fafafa;*/
+    background: white;
+    width: 800px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* 기타 ======================================================================================*/
+#fixed-image{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: pink;
+
+    text-align: center;
+}
+#fixed-image > span{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
